@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Healthcare Agents Collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Fira Mono', monospace; /* Use Fira Mono as the primary font */
+        }
+        .gradient-text {
+            background: linear-gradient(to bottom, #6ee7b7, #3b82f6);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .float-animation {
+            animation: float 3s infinite alternate;
+        }
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 p-4 sm:p-6 md:p-8">
+    <header role="banner" class="header text-center py-8">
+        <h1 class="gradient-text float-animation inline-block text-4xl sm:text-5xl md:text-6xl font-bold">
+            The<br />Healthcare<br />Agents<br />Collective
+        </h1>
+    </header>
+    
+    <main role="main" class="mx-auto max-w-2xl text-lg sm:text-xl leading-relaxed">
+        <p class="mb-6">
+            Welcome to The Healthcare Agents Collective, a groundbreaking not-for-profit initiative that is set to revolutionize the way we approach healthcare. In this era of rapid technological advancements, we stand at the forefront, harnessing the power of cutting-edge AI to address the persistent issues and inefficiencies that have plagued the healthcare industry for far too long. Our mission is simple yet profound: to unite a collection of visionary technology companies in a collaborative effort to shape the healthcare of the future.
+        </p>
+
+        <p class="mb-6">
+            The urgency of our mission cannot be overstated. Healthcare systems worldwide are burdened by skyrocketing costs, limited resources, and inefficiencies that result in suboptimal patient care. We believe that the transformative power of AI holds the key to unlocking innovative solutions and overcoming these challenges. Through collaboration and collective expertise, we will pioneer a new era of healthcare that is efficient, effective, and equitable.
+        </p>
+    </main>
+</body>
+</html>
