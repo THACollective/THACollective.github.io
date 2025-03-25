@@ -4,53 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Healthcare Agents Collective</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: 'Fira Mono', monospace; /* Use Fira Mono as the primary font */
+            font-family: 'Fira Mono', monospace;
+            background: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.9) 0%, rgba(9, 14, 26, 1) 90%);
         }
         .gradient-text {
-            background: linear-gradient(to bottom, #6ee7b7, #3b82f6);
+            background: linear-gradient(135deg, #6ee7b7 0%, #3b82f6 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
         }
         .float-animation {
-            animation: float 3s infinite alternate;
+            animation: float 4s ease-in-out infinite;
         }
         @keyframes float {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .glow-hover:hover {
+            text-shadow: 0 0 10px rgba(110, 231, 183, 0.5);
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            margin: 2rem 0;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 p-4 sm:p-6 md:p-8">
-    <header role="banner" class="header text-center py-8">
-        <h1 class="gradient-text float-animation inline-block text-4xl sm:text-5xl md:text-6xl font-bold">
-            The<br />Healthcare<br />Agents<br />Collective
-        </h1>
+<body class="text-gray-100 min-h-screen">
+    <header class="header text-center py-12 px-4 sm:px-6 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="gradient-text float-animation inline-block text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6 font-mono">
+                The<br />Healthcare<br />Agents<br />Collective
+            </h1>
+            <div class="mt-8">
+                <div class="inline-block h-1 w-24 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-full"></div>
+            </div>
+        </div>
     </header>
-    
-    <main role="main" class="mx-auto max-w-2xl text-lg sm:text-xl leading-relaxed">
-        <p class="mb-6">
-            Welcome to The Healthcare Agents Collective, a community of developers, clinicians, and creators dedicated to improving healthcare through AI-driven solutions. As technology evolves, we tackle long-standing challenges in healthcare delivery.
-        </p>
 
-        <p class="mb-6">
-            Historically, large incumbent electronic patient record companies maintained their competitive edge by building complex software — some began in the 1970s and have only grown in complexity over time. With the advent of AI, that barrier is rapidly shrinking: development cycles are faster, the need for exhaustive business logic is reduced, and enormouse amounts of unstructured data are now being unlocked.
-        </p>
+    <main class="mx-auto max-w-3xl px-4 sm:px-6 md:px-8 pb-16">
+        <div class="fade-in space-y-8">
+            <section>
+                <p class="text-lg sm:text-xl leading-relaxed text-gray-300">
+                    Welcome to <span class="text-emerald-300 glow-hover">The Healthcare Agents Collective</span>, a community of developers, clinicians, and creators dedicated to improving healthcare through AI-driven solutions. As technology evolves, we tackle long-standing challenges in healthcare delivery.
+                </p>
+            </section>
 
-        <p class="mb-6">
-            As healthcare systems face rising costs, resource limitations, and inefficiencies that directly impact patient care, we believe intelligent, adaptable solutions can bridge these gaps. By bringing together a collection of agents, we aim to enhance efficiency, effectiveness, and humanity in healthcare. Reach out to join our collective and work towards a healthier future for everyone.
-        </p>
+            <div class="section-divider"></div>
 
+            <section>
+                <p class="text-lg sm:text-xl leading-relaxed text-gray-300">
+                    Historically, large incumbent electronic patient record companies maintained their competitive edge by building complex software — some began in the 1970s and have only grown in complexity over time. With the advent of AI, that barrier is rapidly shrinking: development cycles are faster, the need for exhaustive business logic is reduced, and enormous amounts of unstructured data are now being unlocked.
+                </p>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section>
+                <p class="text-lg sm:text-xl leading-relaxed text-gray-300">
+                    As healthcare systems face rising costs, resource limitations, and inefficiencies that directly impact patient care, we believe intelligent, adaptable solutions can bridge these gaps. By bringing together a collection of agents, we aim to enhance efficiency, effectiveness, and humanity in healthcare.
+                </p>
+                
+                <a 
+                    href="https://github.com/THACollective/THACollective.github.io/issues/new" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-block mt-8 px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-md font-medium text-white hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 transform hover:scale-105"
+                >
+                    Join Our Collective →
+                </a>
+            </section>
+        </div>
     </main>
-    <footer class="text-center py-4 text-gray-500 text-sm">
-        &copy; 2025 The Healthcare Agents Collective. All rights reserved.
+
+    <footer class="text-center py-8 text-gray-400 text-sm border-t border-gray-800/50">
+        <div class="max-w-4xl mx-auto px-4">
+            <p>&copy; 2025 The Healthcare Agents Collective. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
