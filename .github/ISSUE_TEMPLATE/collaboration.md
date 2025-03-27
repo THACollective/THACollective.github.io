@@ -1,6 +1,6 @@
 ---
 name: "Collaboration Request"
-description: For clinicians, developers, or researchers wanting to join/contribute
+about: For clinicians, developers, or researchers wanting to join/contribute
 title: "[COLLAB] Your Name - Role/Interest"
 labels: ["collaboration"]
 assignees: ""
