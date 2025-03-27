@@ -35,7 +35,7 @@ To join:
 - Open an issue on this repo describing your interests
 - Attend one of our community calls
 
-## 📬 Contact {#contact}
+## 📬 Contact <a id="contact"></a>
 
 For inquiries, please contact our team lead:
 
